@@ -1,17 +1,12 @@
 package dev.jcasas
 
-import io.ktor.server.routing.*
-import io.ktor.http.*
-import io.ktor.serialization.gson.*
-import io.ktor.server.plugins.contentnegotiation.*
-import io.ktor.server.application.*
-import io.ktor.server.response.*
-import io.ktor.server.request.*
-import io.ktor.client.request.*
-import io.ktor.client.statement.*
-import kotlin.test.*
-import io.ktor.server.testing.*
-import dev.jcasas.plugins.*
+import dev.jcasas.plugins.configureRouting
+import io.ktor.client.request.get
+import io.ktor.client.statement.bodyAsText
+import io.ktor.http.HttpStatusCode
+import io.ktor.server.testing.testApplication
+import junit.framework.TestCase.assertEquals
+import org.junit.Test
 
 class ApplicationTest {
     @Test

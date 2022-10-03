@@ -1,6 +1,5 @@
 package dev.jcasas.resources.operations.infrastructure.model
 
-import dev.jcasas.resources.operations.domain.model.Operation
 import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
 import org.bson.codecs.pojo.annotations.BsonId
@@ -19,5 +18,5 @@ data class OperationStorageModel(
     @Contextual
     val amount: BigDecimal,
     @Contextual
-    val date: Date,
+    val date: Date
 )

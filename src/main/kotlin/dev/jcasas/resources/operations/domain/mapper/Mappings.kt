@@ -2,7 +2,6 @@ package dev.jcasas.resources.operations.domain.mapper
 
 import dev.jcasas.resources.operations.domain.model.Operation
 import dev.jcasas.resources.operations.domain.service.OperationsService
-import java.math.BigDecimal
 import java.time.Clock
 import java.time.Instant
 import java.util.Date

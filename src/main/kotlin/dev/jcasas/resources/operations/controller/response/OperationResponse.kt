@@ -16,5 +16,5 @@ data class OperationResponse(
     @SerializedName("amount")
     val amount: BigDecimal,
     @SerializedName("date")
-    val date: Date,
+    val date: Date
 )

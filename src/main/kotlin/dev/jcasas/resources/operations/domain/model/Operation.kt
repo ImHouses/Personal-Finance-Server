@@ -9,7 +9,7 @@ data class Operation(
     val type: Type,
     val category: String,
     val amount: BigDecimal,
-    val date: Date,
+    val date: Date
 ) {
 
     enum class Type {

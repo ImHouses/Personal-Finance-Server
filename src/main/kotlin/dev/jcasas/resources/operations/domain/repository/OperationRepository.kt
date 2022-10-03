@@ -22,7 +22,7 @@ interface OperationRepository {
             val type: String,
             val category: String,
             val amount: BigDecimal,
-            val date: Date,
+            val date: Date
         )
 
         data class Update(
@@ -31,7 +31,7 @@ interface OperationRepository {
             val type: Operation.Type? = null,
             val category: String? = null,
             val amount: BigDecimal? = null,
-            val date: Date? = null,
+            val date: Date? = null
         )
     }
 }

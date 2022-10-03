@@ -17,7 +17,7 @@ import io.ktor.server.routing.routing
 
 class OperationsController(
     application: Application,
-    private val operationsService: OperationsService,
+    private val operationsService: OperationsService
 ) {
 
     init {
@@ -29,7 +29,7 @@ class OperationsController(
 
                 post {
                     val result = add(call)
-                    with (call) {
+                    with(call) {
                         respond(result.toResponse())
                     }
                 }
@@ -38,7 +38,6 @@ class OperationsController(
     }
 
     private suspend fun getOperations(): List<Operation> = operationsService.getAll()
-
 
     private suspend fun add(call: ApplicationCall): Operation {
         val operationPayload = call.receive<OperationPayload>()

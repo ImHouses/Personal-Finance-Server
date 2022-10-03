@@ -1,10 +1,11 @@
 package dev.jcasas
 
-import io.ktor.server.application.*
-import dev.jcasas.plugins.*
+import dev.jcasas.plugins.configureRouting
+import dev.jcasas.plugins.configureSerialization
 import dev.jcasas.resources.operations.controller.OperationsController
 import dev.jcasas.resources.operations.domain.service.OperationsService
 import dev.jcasas.resources.operations.infrastructure.MongoDbOperationsRepository
+import io.ktor.server.application.Application
 import org.litote.kmongo.coroutine.coroutine
 import org.litote.kmongo.reactivestreams.KMongo
 
@@ -19,7 +20,7 @@ fun Application.module() {
 }
 
 fun Application.configureApp() {
-    val database = with (KMongo.createClient().coroutine) {
+    val database = with(KMongo.createClient().coroutine) {
         getDatabase("personal_finances")
     }
     val operationsRepository = MongoDbOperationsRepository(database)

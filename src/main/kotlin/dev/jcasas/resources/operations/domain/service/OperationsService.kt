@@ -1,6 +1,5 @@
 package dev.jcasas.resources.operations.domain.service
 
-import dev.jcasas.resources.operations.domain.mapper.toOperation
 import dev.jcasas.resources.operations.domain.model.Operation
 import dev.jcasas.resources.operations.domain.repository.OperationRepository
 import java.math.BigDecimal
@@ -27,7 +26,7 @@ class OperationsService(private val repository: OperationRepository) {
             val name: String,
             val type: String,
             val category: String,
-            val amount: BigDecimal,
+            val amount: BigDecimal
         ) : Param()
     }
 }
