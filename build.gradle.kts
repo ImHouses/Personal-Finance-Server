@@ -6,6 +6,7 @@ val mongoDbDriverVersion: String = "4.7.1"
 plugins {
     application
     kotlin("jvm") version "1.7.20"
+    kotlin("plugin.serialization") version "1.7.20"
     id("io.ktor.plugin") version "2.1.2"
 }
 
@@ -32,5 +33,9 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 
     // MongoDB
-    implementation("org.mongodb:mongodb-driver-sync:$mongoDbDriverVersion")
+    implementation("org.litote.kmongo:kmongo-coroutine:4.7.1")
+    implementation("org.litote.kmongo:kmongo-async:4.7.1")
+
+    // Kotlinx Serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
 }
