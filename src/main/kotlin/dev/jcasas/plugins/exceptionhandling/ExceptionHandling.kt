@@ -8,7 +8,6 @@ import io.ktor.server.plugins.requestvalidation.RequestValidationException
 import io.ktor.server.plugins.statuspages.StatusPages
 import io.ktor.server.response.respond
 
-
 fun Application.configureExceptionHandling() {
     install(StatusPages) {
         exception<Throwable> { call, cause ->
@@ -39,4 +38,3 @@ private suspend fun handleUnknownError(call: ApplicationCall, throwable: Throwab
     println("[DEBUG]: $throwable")
     call.respond(HttpStatusCode.InternalServerError, ApiError("Unknown Error :("))
 }
-

@@ -4,7 +4,6 @@ import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
 import org.bson.codecs.pojo.annotations.BsonId
 import org.litote.kmongo.Id
-import org.litote.kmongo.newId
 import java.math.BigDecimal
 import java.util.Date
 

@@ -16,5 +16,5 @@ data class OperationUpdatePayload(
     @SerializedName("amount")
     val amount: BigDecimal? = null,
     @SerializedName("date")
-    val date: Date? = null,
+    val date: Date? = null
 )

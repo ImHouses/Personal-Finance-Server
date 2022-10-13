@@ -9,6 +9,6 @@ private object ExceptionTypes {
     val badRequestTypes = listOf(
         OperationNotFound::class,
         IllegalArgumentException::class,
-        ContentTransformationException::class,
+        ContentTransformationException::class
     )
 }

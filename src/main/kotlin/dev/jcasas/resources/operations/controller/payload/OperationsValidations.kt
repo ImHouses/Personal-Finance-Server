@@ -17,7 +17,7 @@ fun RequestValidationConfig.configureOperationsValidations() {
     }
 
     validate<OperationPayload> { payload ->
-        with (payload) {
+        with(payload) {
             when {
                 name.isEmpty() -> ValidationResult.Invalid("Name must not be empty.")
                 category.isEmpty() -> ValidationResult.Invalid("Category must not be empty.")

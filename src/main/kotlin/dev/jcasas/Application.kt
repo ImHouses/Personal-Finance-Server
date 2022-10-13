@@ -1,8 +1,8 @@
 package dev.jcasas
 
-import dev.jcasas.plugins.exceptionhandling.configureExceptionHandling
 import dev.jcasas.plugins.configureSerialization
 import dev.jcasas.plugins.configureValidation
+import dev.jcasas.plugins.exceptionhandling.configureExceptionHandling
 import dev.jcasas.resources.operations.controller.OperationsController
 import dev.jcasas.resources.operations.domain.service.OperationsService
 import dev.jcasas.resources.operations.infrastructure.MongoDbOperationsRepository

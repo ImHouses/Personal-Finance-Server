@@ -56,7 +56,7 @@ class OperationsService(private val repository: OperationRepository) {
             val type: String,
             val category: String,
             val amount: BigDecimal,
-            val date: Date? = null,
+            val date: Date? = null
         ) : Param()
 
         data class Update(
@@ -65,7 +65,7 @@ class OperationsService(private val repository: OperationRepository) {
             val type: String? = null,
             val category: String? = null,
             val amount: BigDecimal? = null,
-            val date: Date? = null,
+            val date: Date? = null
         ) : Param()
     }
 }

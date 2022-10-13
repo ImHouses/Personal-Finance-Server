@@ -1,7 +1,7 @@
 package dev.jcasas.resources.operations.controller
 
-import dev.jcasas.resources.operations.controller.mapper.toServiceParam
 import dev.jcasas.resources.operations.controller.mapper.toResponse
+import dev.jcasas.resources.operations.controller.mapper.toServiceParam
 import dev.jcasas.resources.operations.controller.payload.OperationPayload
 import dev.jcasas.resources.operations.controller.payload.OperationUpdatePayload
 import dev.jcasas.resources.operations.domain.model.Operation
@@ -9,7 +9,6 @@ import dev.jcasas.resources.operations.domain.service.OperationsService
 import io.ktor.server.application.Application
 import io.ktor.server.application.ApplicationCall
 import io.ktor.server.application.call
-import io.ktor.server.plugins.requestvalidation.RequestValidationConfig
 import io.ktor.server.request.receive
 import io.ktor.server.response.respond
 import io.ktor.server.routing.get
