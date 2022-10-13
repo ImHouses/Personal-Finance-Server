@@ -6,11 +6,13 @@ import dev.jcasas.resources.operations.controller.payload.OperationPayload
 import dev.jcasas.resources.operations.controller.payload.OperationUpdatePayload
 import dev.jcasas.resources.operations.domain.model.Operation
 import dev.jcasas.resources.operations.domain.service.OperationsService
+import io.ktor.http.HttpStatusCode
 import io.ktor.server.application.Application
 import io.ktor.server.application.ApplicationCall
 import io.ktor.server.application.call
 import io.ktor.server.request.receive
 import io.ktor.server.response.respond
+import io.ktor.server.routing.delete
 import io.ktor.server.routing.get
 import io.ktor.server.routing.post
 import io.ktor.server.routing.put
@@ -28,7 +30,6 @@ class OperationsController(
                 get {
                     call.respond(getOperations())
                 }
-
                 post {
                     val result = add(call)
                     with(call) {
@@ -47,6 +48,13 @@ class OperationsController(
                             .get(call.parameters["id"] ?: throw IllegalArgumentException())
                             .toResponse()
                     )
+                }
+
+                delete("/{id}") {
+                    operationsService.remove(
+                        id = call.parameters["id"] ?: throw IllegalArgumentException()
+                    )
+                    call.respond(HttpStatusCode.OK)
                 }
             }
         }

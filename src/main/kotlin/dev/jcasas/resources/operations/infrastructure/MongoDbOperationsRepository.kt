@@ -37,7 +37,7 @@ class MongoDbOperationsRepository(
     }
 
     override suspend fun remove(id: String) {
-        TODO("Not yet implemented")
+        collection.deleteOneById(id = ObjectId(id))
     }
 
     companion object {

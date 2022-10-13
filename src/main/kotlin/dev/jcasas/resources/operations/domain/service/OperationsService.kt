@@ -35,6 +35,10 @@ class OperationsService(private val repository: OperationRepository) {
         )
     }
 
+    suspend fun remove(id: String) {
+        repository.remove(id)
+    }
+
     private fun Param.Add.toOperation(): Operation {
         val type = when (type) {
             "EXPENSE" -> Operation.Type.EXPENSE
