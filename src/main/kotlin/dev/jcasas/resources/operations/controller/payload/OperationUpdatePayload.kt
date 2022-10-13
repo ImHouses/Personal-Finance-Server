@@ -4,15 +4,17 @@ import com.google.gson.annotations.SerializedName
 import java.math.BigDecimal
 import java.util.Date
 
-data class OperationPayload(
+data class OperationUpdatePayload(
+    @SerializedName("id")
+    val id: String,
     @SerializedName("name")
-    val name: String,
+    val name: String? = null,
     @SerializedName("type")
-    val type: String,
+    val type: String? = null,
     @SerializedName("category")
-    val category: String,
+    val category: String? = null,
     @SerializedName("amount")
-    val amount: BigDecimal,
+    val amount: BigDecimal? = null,
     @SerializedName("date")
     val date: Date? = null,
 )

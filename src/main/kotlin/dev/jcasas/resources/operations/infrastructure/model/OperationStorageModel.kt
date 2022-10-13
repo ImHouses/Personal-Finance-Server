@@ -11,7 +11,7 @@ import java.util.Date
 @Serializable
 data class OperationStorageModel(
     @BsonId
-    val id: Id<OperationStorageModel> = newId(),
+    val id: Id<OperationStorageModel>,
     val name: String,
     val type: String,
     val category: String,
