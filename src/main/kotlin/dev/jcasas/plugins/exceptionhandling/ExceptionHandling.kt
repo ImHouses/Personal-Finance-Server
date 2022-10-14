@@ -35,6 +35,5 @@ private suspend fun handleRequestValidationException(call: ApplicationCall, exce
 }
 
 private suspend fun handleUnknownError(call: ApplicationCall, throwable: Throwable) {
-    println("[DEBUG]: $throwable")
-    call.respond(HttpStatusCode.InternalServerError, ApiError("Unknown Error :("))
+    call.respond(HttpStatusCode.InternalServerError, ApiError(throwable.stackTraceToString()))
 }
