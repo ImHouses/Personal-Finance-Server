@@ -14,3 +14,9 @@ The following command is the only thing we need:
 ```bash
 ./gradlew :run
 ```
+
+## TODO
+
+- [ ] Create a Docker Compose file to run locally two containers:
+  one for the database and another for the MongoDB database.
+- [ ] Configure GitHub Actions to deploy dev/production images when merging to master.
