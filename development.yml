@@ -1,0 +1,11 @@
+services:
+  app:
+    depends_on:
+      - "db"
+  db:
+    image: mongo
+    volumes:
+      - .tmp/db:/data/db
+    restart: always
+    ports:
+      - 27017:27017
