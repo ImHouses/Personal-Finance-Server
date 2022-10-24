@@ -1,6 +1,14 @@
 # Running the App
 Before running locally, we need to install Docker.
 
+## Make changes
+After making changes, the app needs to be rebuilt in order to test the changes locallly.
+The following command will rebuild the app.
+```bash
+docker compose build app
+```
+
+## Running
 Then, the following command is enough:
 ```bash
 docker compose -f docker-compose.yml -f development.yml --env-file ./compose/dev.env up
