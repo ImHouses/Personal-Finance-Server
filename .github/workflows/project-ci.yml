@@ -28,5 +28,3 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build
-        with:
-          arguments: [-d]
