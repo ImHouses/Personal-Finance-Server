@@ -1,5 +1,6 @@
 package dev.jcasas
 
+import dev.jcasas.plugins.configureLogging
 import dev.jcasas.plugins.configureSerialization
 import dev.jcasas.plugins.configureValidation
 import dev.jcasas.plugins.exceptionhandling.configureExceptionHandling
@@ -14,6 +15,7 @@ fun Application.module() {
     configureSerialization()
     configureExceptionHandling()
     configureValidation()
+    configureLogging()
     configureApp()
 }
 

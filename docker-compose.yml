@@ -4,6 +4,8 @@ services:
     build: .
     ports:
       - "8080:8080"
+    container_name: personalfinance-app
     environment:
       - MONGO_CONNECTION_STRING
       - DATABASE_NAME
+      - MONGO_LOGGING

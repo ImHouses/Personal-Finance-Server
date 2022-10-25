@@ -33,6 +33,8 @@ dependencies {
     implementation("io.ktor:ktor-server-host-common-jvm:2.1.2")
     implementation("io.ktor:ktor-server-status-pages-jvm:2.1.2")
     implementation("io.ktor:ktor-server-request-validation:$ktor_version")
+    implementation("io.ktor:ktor-server-call-logging:$ktor_version")
+    implementation("io.ktor:ktor-server-call-logging-jvm:2.1.2")
 
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
@@ -42,5 +44,5 @@ dependencies {
     implementation("org.litote.kmongo:kmongo-async:4.7.1")
 
     // Kotlinx Serialization
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
 }
