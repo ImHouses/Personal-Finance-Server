@@ -9,7 +9,7 @@
 
 name: Personal Finance - CI
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   build:
@@ -28,3 +28,5 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build
+        with:
+          arguments: [-d]
